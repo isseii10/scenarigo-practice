@@ -1,0 +1,14 @@
+title: get my repository
+steps:
+- title: GET https://api.github.com/repos/isseii10/scenarigo-practice
+  vars:
+    user: isseii10
+    repo: scenarigo-practice
+  protocol: http
+  request:
+    method: GET
+    url: "https://api.github.com/repos/{{vars.user}}/{{vars.repo}}"
+  expect:
+    code: OK
+    body:
+      name: "{{vars.repo}}"
