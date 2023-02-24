@@ -1,13 +1,12 @@
 schemaVersion: config/v1
 
 scenarios:
-  - github.yaml # Specify test scenario files and directories.
-  - get-my-repo.yaml
+  - scenarios
 
-# pluginDirectory: ./gen      # Specify the root directory of plugins.
-# plugins:                  # Specify configurations to build plugins.
-#   plugin.so:              # Map keys specify plugin output file path from the root directory of plugins.
-#     src: ./path/to/plugin # Specify the source file, directory, or "go gettable" module path of the plugin.
+pluginDirectory: ./gen      # Specify the root directory of plugins.
+plugins:                  # Specify configurations to build plugins.
+  date.so:              # Map keys specify plugin output file path from the root directory of plugins.
+    src: ./plugins/date # Specify the source file, directory, or "go gettable" module path of the plugin.
 
 # output:
   # verbose: false   # Enable verbose output.
